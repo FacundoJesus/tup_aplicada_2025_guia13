@@ -1,6 +1,6 @@
 ﻿namespace GeometriaClientRestAPIDesktop
 {
-    partial class Form1
+    partial class FormPrincipal
     {
         /// <summary>
         ///  Required designer variable.

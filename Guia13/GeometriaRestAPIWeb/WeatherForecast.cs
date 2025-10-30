@@ -1,4 +1,4 @@
-namespace GeometriaRestAPIWeb2
+namespace GeometriaRestAPIWeb
 {
     public class WeatherForecast
     {
