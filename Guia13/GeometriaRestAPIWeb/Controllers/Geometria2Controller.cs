@@ -6,19 +6,20 @@ namespace GeometriaRestAPIWeb.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class Geometrias2Controller : Controller
+    public class Geometrias2Controller : ControllerBase
     {
 
         private static List<FiguraDTO> figuras = new List<FiguraDTO>()
-    {
+        {
         new FiguraDTO{ Id=1, Tipo=1, Largo=1, Ancho=1 }
-    };
+        };
 
         // GET: api/<GeometriaController>
         [HttpGet]
         public ActionResult<List<FiguraDTO>> Get()
         {
-            if (figuras.Any() == false) return NotFound("No se encontraron figuras");
+            if (figuras.Any() == false) 
+                return NotFound("No se encontraron figuras");
             return Ok(figuras);
         }
 
@@ -27,8 +28,9 @@ namespace GeometriaRestAPIWeb.Controllers
         public ActionResult<FiguraDTO> Get(int id)
         {
             var figura = (from f in figuras where f.Id == id select f).FirstOrDefault();
-
-            if (figuras.Any() == false) return NotFound("No se encontro la figura");
+            
+            if (figuras == null) 
+                return NotFound("No se encontro la figura");
 
             return Ok(figura);
         }

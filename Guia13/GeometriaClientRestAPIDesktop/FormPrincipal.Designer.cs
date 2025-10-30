@@ -28,12 +28,46 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            listBox1 = new ListBox();
+            btnActualizarLista = new Button();
+            SuspendLayout();
+            // 
+            // listBox1
+            // 
+            listBox1.FormattingEnabled = true;
+            listBox1.ItemHeight = 15;
+            listBox1.Location = new Point(12, 12);
+            listBox1.Name = "listBox1";
+            listBox1.Size = new Size(323, 424);
+            listBox1.TabIndex = 0;
+            // 
+            // btnActualizarLista
+            // 
+            btnActualizarLista.Location = new Point(347, 191);
+            btnActualizarLista.Name = "btnActualizarLista";
+            btnActualizarLista.Size = new Size(92, 51);
+            btnActualizarLista.TabIndex = 1;
+            btnActualizarLista.Text = "Actualizar Lista";
+            btnActualizarLista.UseVisualStyleBackColor = true;
+            btnActualizarLista.Click += btnActualizarLista_Click;
+            // 
+            // FormPrincipal
+            // 
+            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(451, 450);
+            Controls.Add(btnActualizarLista);
+            Controls.Add(listBox1);
+            Name = "FormPrincipal";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "ClienteRestAPI";
+            Load += FormPrincipal_Load;
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private ListBox listBox1;
+        private Button btnActualizarLista;
     }
 }
